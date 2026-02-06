@@ -26,7 +26,7 @@ public class AreaCalculator {
 
         System.out.printf("%.2f\n", AreaCalculator.calculateArea(r));
         System.out.printf("%.2f\n", AreaCalculator.calculateArea(l, w));
-        System.out.printf("%.2f\n", AreaCalculator.calculateArea(b, h));
+        System.out.printf("%.2f\n", AreaCalculator.calculateArea((double) b, (double) h));
         
         input.close();
     }

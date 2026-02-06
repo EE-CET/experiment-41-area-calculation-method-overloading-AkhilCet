@@ -15,18 +15,21 @@ public class AreaCalculator {
     }
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+       Scanner input = new Scanner(System.in);
 
 
-        int r = input.nextInt();
-        int l = input.nextInt();
-        int w = input.nextInt();
-        int b = input.nextInt();
-        int h = input.nextInt();
+        float r = input.nextFloat();
+        float l = input.nextFloat();
+        float w = input.nextFloat();
+        double b = input.nextDouble();
+        double h = input.nextDouble();
 
         System.out.printf("%.2f\n", AreaCalculator.calculateArea(r));
         System.out.printf("%.2f\n", AreaCalculator.calculateArea(l, w));
-        System.out.printf("%.2f\n", AreaCalculator.calculateArea((double) b, (double) h));
+        // Java does not support keyword arguments. The line above will not compile.
+        // To call the specific method for the triangle's area, you can cast the
+        // integer variables to doubles to match the method signature.
+        System.out.printf("%.2f\n", AreaCalculator.calculateArea( b, h));
         
         input.close();
     }
